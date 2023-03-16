@@ -288,4 +288,5 @@ def annotation_updater(rpm,state,rep,annotation_rpm, annotation_state, fig_signa
         return fig_signal, '', ''
 
 if __name__ == '__main__':
+    from assets.AE import AE
     app.run_server(debug=True)
