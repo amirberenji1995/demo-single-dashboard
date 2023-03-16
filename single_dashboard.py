@@ -40,6 +40,8 @@ app.css.append_css({
     'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
 })
 
+server = app.server
+
 importing_path = os.getcwd() + '/assets/'
 sig_df = pd.read_csv(importing_path + 'subsampled_test_df.csv', index_col=0)
 lrp_df = pd.read_csv(importing_path + 'LRP_subsampled_test_df.csv', index_col=0)
