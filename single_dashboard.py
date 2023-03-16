@@ -46,6 +46,7 @@ importing_path = os.getcwd() + '/assets/'
 sig_df = pd.read_csv(importing_path + 'subsampled_test_df.csv', index_col=0)
 lrp_df = pd.read_csv(importing_path + 'LRP_subsampled_test_df.csv', index_col=0)
 feature_scaler = joblib.load(open(importing_path + 'scaler.pkl', 'rb'))
+AE_loaded = AE()
 AE_loaded = torch.load(importing_path + 'ae.pt', map_location=torch.device('cpu'))
 AE_loaded.eval()
 
