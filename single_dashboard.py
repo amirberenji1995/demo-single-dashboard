@@ -61,10 +61,6 @@ def softmax_calculator(input_diction):
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = DashProxy(__name__,transforms=[MultiplexerTransform()], external_stylesheets=external_stylesheets)
-app.css.append_css({
-    'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
-})
-
 server = app.server
 
 importing_path = os.getcwd() + '/assets/'
