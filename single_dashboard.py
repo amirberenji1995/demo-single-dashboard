@@ -11,7 +11,6 @@ from dash_extensions.enrich import Output, DashProxy, Input, MultiplexerTransfor
 import plotly.graph_objects as go
 
 import joblib
-# from assets.AE import AE
 import torch
 from sklearn.metrics import mean_squared_error
 
@@ -60,7 +59,7 @@ def softmax_calculator(input_diction):
   return normalized_output_diction
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-# app = Dash(__name__, external_stylesheets=external_stylesheets)
+
 app = DashProxy(transforms=[MultiplexerTransform()], external_stylesheets=external_stylesheets)
 app.css.append_css({
     'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
@@ -316,5 +315,4 @@ def annotation_updater(rpm,state,rep,annotation_rpm, annotation_state, fig_signa
         return fig_signal, '', ''
 
 if __name__ == '__main__':
-    from assets.AE import AE
     app.run_server(debug=True)
